@@ -21,13 +21,14 @@ RUN pacman -Sy \
   mingw-w64-gcc \
   gtk3 \
   cmake \
-  go
+  go \
+  python2
 WORKDIR /tmp
 
 # install macOS cross compilation tools
 RUN sudo -u nobody git clone https://aur.archlinux.org/osxcross-git.git \
   && cd osxcross-git \
-  && sudo -u nobody makepkg --noconfirm -s \
+  && sudo -u root makepkg --noconfirm -s \
   && pacman -U --noconfirm osxcross-git*.pkg.tar.xz \
   && cd .. \
   && rm -Rf osxcross-git
