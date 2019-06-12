@@ -22,7 +22,8 @@ RUN pacman -Sy \
   gtk3 \
   cmake \
   go \
-  python2
+  python2 \
+  python3
 WORKDIR /tmp
 
 # install macOS cross compilation tools
