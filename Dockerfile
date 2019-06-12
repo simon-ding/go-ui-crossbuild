@@ -1,4 +1,4 @@
-FROM magj/go-ui-crossbuild-base
+FROM simonding/go-ui-crossbuild-base
 WORKDIR /go/src
 COPY gouicrossbuild.sh /bin/gouicrossbuild
 RUN ln /bin/gouicrossbuild /bin/gocrossbuild
