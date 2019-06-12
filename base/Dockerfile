@@ -28,7 +28,7 @@ WORKDIR /tmp
 # install macOS cross compilation tools
 RUN sudo -u nobody git clone https://aur.archlinux.org/osxcross-git.git \
   && cd osxcross-git \
-  && sudo -u root makepkg --noconfirm -s \
+  && sudo -u nobody makepkg --noconfirm -s \
   && pacman -U --noconfirm osxcross-git*.pkg.tar.xz \
   && cd .. \
   && rm -Rf osxcross-git
