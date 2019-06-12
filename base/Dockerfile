@@ -1,7 +1,5 @@
 FROM archlinux/base
 # Add mingw binary distribution repository
-RUN printf  "[ownstuff]\n\
-SigLevel = Optional TrustAll\n\
 # install dependencies
 RUN pacman -Sy \
   && pacman -S --noconfirm \
